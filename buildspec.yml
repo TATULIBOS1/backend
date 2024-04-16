@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - printf '[{"name":"my-first-ecr-repo","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
+      - printf '[{"name":"app","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
  
 artifacts:
     files: imagedefinitions.json
